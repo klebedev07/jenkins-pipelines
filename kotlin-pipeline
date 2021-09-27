@@ -1,3 +1,26 @@
-  
-  
-  
+pipeline {
+    agent any
+    
+    stages {
+        stage('Build') {
+            steps {
+                sh 'echo Build'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'echo Test'
+            }
+        }
+        stage('Build Docker image') {
+            steps {
+                sh 'echo build docker'
+            }
+        }
+        stage('Push Docker image') {
+            steps {
+                sh 'echo push docker'
+            }
+        }
+    }
+}
